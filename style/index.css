@@ -1,0 +1,153 @@
+:root {
+    --main-color: #6C63FF;
+    --background-color: #f7f7f7;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Kanit";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+.main-container{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    margin-top: 10%;
+}
+.todo-items {
+    height: 45vh;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.todo-item {
+    display: flex;
+    border: 2px solid transparent;
+    width: 100%;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p {
+    margin: 0 !important;
+}
+
+.todo-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    appearance: none;
+    background-color: #f7f7f7;
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--main-color);
+}
+
+input[type="checkbox"]:checked::before {
+    content: "✓";
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    left: 3px;
+    right: 0;
+}
+
+.my-text {
+    transition: color 0.3s ease;
+}
+
+.my-text.checked {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.title {
+    font-size: 48px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.subtitle{
+    font-size: 24px;
+    padding: 50px;
+
+}
+.modal-title {
+    font-size: 24px;
+    text-align: center;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-light {
+    background-color: transparent !important;
+    border: 2px solid var(--main-color);
+    color: var(--main-color) !important;
+}
+
+.todo-input {
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.btn {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--main-color) !important;
+    color: white !important;
+}
+
+.input-search {
+    border: 2px solid var(--main-color);
+    width: 400px;
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    gap: 5px;
+}
+
+.input-search input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.input-search input:focus {
+    outline: none;
+}
+
